@@ -1,0 +1,397 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.App.dark {
+  background-color: #1e1e1e;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.App.dark .app-header {
+  border-bottom-color: #444;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.App.dark .theme-toggle:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.streak-counter {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6b35;
+}
+
+.progress-section {
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.App.dark .progress-bar {
+  background-color: #333;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.App.dark .progress-text {
+  color: #ccc;
+}
+
+.pomodoro-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.App.dark .pomodoro-section {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.pomodoro-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff6b35;
+  font-family: 'Courier New', monospace;
+}
+
+.pomodoro-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.pomodoro-controls button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pomodoro-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.current-task {
+  margin: 0;
+  font-style: italic;
+  color: #666;
+}
+
+.App.dark .current-task {
+  color: #ccc;
+}
+
+.filters-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.App.dark .search-input {
+  background-color: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+.filters-section select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.App.dark .filters-section select {
+  background-color: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+}
+
+.App.dark h1 {
+  color: #fff;
+}
+
+h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.App.dark h3 {
+  color: #fff;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.todo-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.todo-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.todo-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.todo-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.todo-form button:hover {
+  background-color: #45a049;
+}
+
+.outerDiv {
+  max-width: 100%;
+}
+
+.outerDiv ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.outerDiv ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.outerDiv ul li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.priority-high {
+  background-color: #ffebee;
+  border-left: 5px solid #f44336;
+}
+
+.priority-medium {
+  background-color: #fff3e0;
+  border-left: 5px solid #ff9800;
+}
+
+.priority-low {
+  background-color: #e8f5e8;
+  border-left: 5px solid #4caf50;
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.due-date {
+  font-size: 14px;
+  color: #666;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.actions button {
+  padding: 5px 10px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: #1976D2;
+}
+
+.actions span {
+  cursor: pointer;
+  font-size: 24px;
+  color: #f44336;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.actions span:hover {
+  color: #d32f2f;
+}
+
+.edit-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.edit-form button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-form button:first-of-type {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-form button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .todo-form {
+    flex-direction: column;
+  }
+
+  .outerDiv ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
