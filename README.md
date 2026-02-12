@@ -1,8 +1,3 @@
-Here is a **simple and short README file** version for pushing to GitHub 👇
-
-You can copy-paste this into your `README.md`.
-
----
 
 # 📝 Advanced To-Do List App
 
