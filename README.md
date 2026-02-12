@@ -47,10 +47,4 @@ npm start
 App runs on:
 `http://localhost:3000`
 
----
 
-
-
----
-
-If you want, I can also give an even **shorter 5-line version** for clean GitHub look 😊
